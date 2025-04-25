@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Makeup & Threading | Faces Beauty Salon</title>
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.1), 0 10px 10px -5px rgba(236, 72, 153, 0.04);
+      }
+      .feature-icon {
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover .feature-icon {
+        transform: scale(1.1);
+        background: rgba(236, 72, 153, 0.9);
+      }
+      .hero-overlay {
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.8) 0%, rgba(219, 39, 119, 0.8) 100%);
+      }
+      .accordion-content {
+        transition: max-height 0.3s ease-out, opacity 0.3s ease;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .accordion-content.open {
+        opacity: 1;
+        max-height: 300px;
+      }
+    </style>
+  </head>
+  <body class="font-['Mulish'] bg-pink-50">
+    <!-- Header -->
+    <header id="home" class="sticky top-0 z-50 bg-white shadow-md">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div>
+          <h1 class="text-pink-600 font-bold text-3xl uppercase tracking-wider">Faces</h1>
+          <p class="text-xs text-gray-500">Beauty Salon</p>
+        </div>
+        <div class="hidden lg:flex gap-8 text-lg font-medium">
+          <a href="#home" class="hover:text-pink-600 transition">Home</a>
+          <a href="#services" class="hover:text-pink-600 transition">Services</a>
+          <a href="#benefits" class="hover:text-pink-600 transition">Benefits</a>
+          <a href="#faq" class="hover:text-pink-600 transition">FAQ</a>
+          <a href="../index.html#contact" class="hover:text-pink-600 transition">Contact</a>
+        </div>
+        <div class="lg:hidden">
+          <i class="ri-menu-3-line text-2xl text-pink-600 cursor-pointer"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 hero-overlay z-10"></div>
+      <img src="../assets/images/eye/hero.png" alt="Eye Makeup" class="w-full h-[500px] object-cover object-center">
+      <div class="absolute inset-0 flex items-center z-20 container mx-auto px-6">
+        <div class="max-w-2xl text-white">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Elevate Your Eye Beauty</h1>
+          <p class="text-xl md:text-2xl mb-8">Professional eye makeup and threading services for a flawless, captivating look</p>
+          <a href="../index.html#contact" class="inline-block bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-100 transition duration-300">
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Eye Services</h2>
+        <div class="w-20 h-1 bg-pink-600 mx-auto"></div>
+        <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+          We specialize in enhancing your natural beauty with precision eye makeup and threading services
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Eye Makeup Service -->
+        <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img src="../assets/images/eye/makeup.jpg" alt="Eye Makeup" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">Eye Makeup</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-medium">From ₹599</span>
+              <span class="text-gray-500">45-60 mins</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              From natural daytime looks to dramatic evening styles, our makeup artists will enhance your eyes to perfection.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Waterproof & long-lasting</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Hypoallergenic products</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Customized to your eye shape</span>
+              </li>
+            </ul>
+            <a href="../index.html#contact" class="block w-full text-center bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition duration-300">
+              Book Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Eyebrow Threading -->
+        <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img src="../assets/images/eye/threading.jpg" alt="Eyebrow Threading" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">Eyebrow Threading</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-medium">From ₹299</span>
+              <span class="text-gray-500">20-30 mins</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Achieve perfectly shaped brows with our precise threading technique that removes even the finest hairs.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Precision shaping</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Less irritation than waxing</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Expert consultation included</span>
+              </li>
+            </ul>
+            <a href="../index.html#contact" class="block w-full text-center bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition duration-300">
+              Book Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Eyelash Extensions -->
+        <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img src="../assets/images/eye/eyelash.jpeg" alt="Eyelash Extensions" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">Eyelash Extensions</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-medium">From ₹1499</span>
+              <span class="text-gray-500">90-120 mins</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Get fuller, longer lashes that last for weeks with our premium eyelash extension services.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>Natural or dramatic looks</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>High-quality synthetic fibers</span>
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-pink-500 mr-2"></i>
+                <span>4-6 week retention</span>
+              </li>
+            </ul>
+            <a href="../index.html #contact" class="block w-full text-center bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition duration-300">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Faces Salon</h2>
+          <div class="w-20 h-1 bg-pink-600 mx-auto"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+            We're committed to providing exceptional beauty services with care and expertise
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="feature-card bg-pink-50 rounded-lg p-8 text-center hover:shadow-lg transition duration-300">
+            <div class="feature-icon bg-pink-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-user-star-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Certified Experts</h3>
+            <p class="text-gray-600">
+              Our specialists have 5+ years experience in eye makeup and threading techniques.
+            </p>
+          </div>
+
+          <div class="feature-card bg-pink-50 rounded-lg p-8 text-center hover:shadow-lg transition duration-300">
+            <div class="feature-icon bg-pink-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-shield-check-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Premium Products</h3>
+            <p class="text-gray-600">
+              We use only high-quality, dermatologist-tested products for safety and beauty.
+            </p>
+          </div>
+
+          <div class="feature-card bg-pink-50 rounded-lg p-8 text-center hover:shadow-lg transition duration-300">
+            <div class="feature-icon bg-pink-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-medicine-bottle-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Hygienic Standards</h3>
+            <p class="text-gray-600">
+              Strict sanitation protocols with disposable tools and sterilized equipment.
+            </p>
+          </div>
+
+          <div class="feature-card bg-pink-50 rounded-lg p-8 text-center hover:shadow-lg transition duration-300">
+            <div class="feature-icon bg-pink-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-heart-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Personalized Care</h3>
+            <p class="text-gray-600">
+              Customized services tailored to your unique features and preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+          <div class="w-20 h-1 bg-pink-600 mx-auto"></div>
+          <p class="mt-6 text-lg text-gray-600">
+            Find answers to common questions about our eye services
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleAccordion(1)">
+              <h3 class="text-lg font-semibold text-gray-800">How long does eye makeup last?</h3>
+              <i id="icon1" class="ri-arrow-down-s-line text-pink-600 text-xl transition-transform"></i>
+            </button>
+            <div id="answer1" class="accordion-content px-6 pb-6 text-gray-600">
+              <p>Our professional eye makeup typically lasts 8-12 hours. For special occasions, we offer long-wear formulations that can last up to 16 hours. We also provide touch-up kits and tips to extend the wear of your eye makeup.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleAccordion(2)">
+              <h3 class="text-lg font-semibold text-gray-800">Is threading better than waxing for eyebrows?</h3>
+              <i id="icon2" class="ri-arrow-down-s-line text-pink-600 text-xl transition-transform"></i>
+            </button>
+            <div id="answer2" class="accordion-content px-6 pb-6 text-gray-600">
+              <p>Threading is generally superior to waxing for several reasons: it's more precise, removes finer hairs, causes less skin irritation, and doesn't involve heat or chemicals. It's particularly beneficial for those with sensitive skin or who use retinoids. Our threading experts can create perfect arches tailored to your face shape.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleAccordion(3)">
+              <h3 class="text-lg font-semibold text-gray-800">How long do eyelash extensions last?</h3>
+              <i id="icon3" class="ri-arrow-down-s-line text-pink-600 text-xl transition-transform"></i>
+            </button>
+            <div id="answer3" class="accordion-content px-6 pb-6 text-gray-600">
+              <p>With proper care, our eyelash extensions typically last 4-6 weeks, which matches your natural lash growth cycle. We recommend touch-up appointments every 2-3 weeks to maintain fullness. The longevity depends on factors like your skin type, daily activities, and aftercare routine - all of which we'll guide you through.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleAccordion(4)">
+              <h3 class="text-lg font-semibold text-gray-800">Can I get eye makeup done for sensitive eyes?</h3>
+              <i id="icon4" class="ri-arrow-down-s-line text-pink-600 text-xl transition-transform"></i>
+            </button>
+            <div id="answer4" class="accordion-content px-6 pb-6 text-gray-600">
+              <p>Absolutely! We specialize in eye makeup for sensitive eyes. We use hypoallergenic, ophthalmologist-tested products that are fragrance-free and gentle. Our artists are trained in techniques that minimize product contact with the eye area while still achieving beautiful results. Just inform us about your sensitivity when booking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-pink-600 to-pink-400 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Enhance Your Eye Beauty?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Book your appointment today and experience the Faces Salon difference
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="../index.html#contact" class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition duration-300">
+            Book Now
+          </a>
+          <a href="tel:+919876543210" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition duration-300">
+            Call Us: +91 98765 43210
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold text-pink-400 mb-4">Faces</h3>
+            <p class="text-gray-400">
+              Enhancing your natural beauty with professional care and premium services.
+            </p>
+            <div class="flex space-x-4 mt-6">
+              <a href="#" class="text-gray-400 hover:text-pink-400"><i class="ri-facebook-fill text-xl"></i></a>
+              <a href="#" class="text-gray-400 hover:text-pink-400"><i class="ri-instagram-line text-xl"></i></a>
+              <a href="#" class="text-gray-400 hover:text-pink-400"><i class="ri-twitter-fill text-xl"></i></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="text-gray-400 hover:text-pink-400 transition">Home</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-pink-400 transition">Services</a></li>
+              <li><a href="#benefits" class="text-gray-400 hover:text-pink-400 transition">Why Choose Us</a></li>
+              <li><a href="#faq" class="text-gray-400 hover:text-pink-400 transition">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Eye Makeup</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Eyebrow Threading</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Eyelash Extensions</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Bridal Eye Makeup</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <address class="text-gray-400 not-italic">
+              <p class="mb-2">123 Beauty Street, Mumbai</p>
+              <p class="mb-2">Phone: +91 98765 43210</p>
+              <p class="mb-2">Email: info@facessalon.com</p>
+              <p>Hours: 10AM - 8PM (Mon-Sun)</p>
+            </address>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+          <p>&copy; 2023 Faces Beauty Salon. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleAccordion(id) {
+        const answer = document.getElementById(`answer${id}`);
+        const icon = document.getElementById(`icon${id}`);
+        
+        answer.classList.toggle('open');
+        icon.classList.toggle('rotate-180');
+        
+        // Close other open accordions if needed
+        document.querySelectorAll('.accordion-content').forEach((item) => {
+          if (item.id !== `answer${id}` && item.classList.contains('open')) {
+            item.classList.remove('open');
+            const otherIcon = document.getElementById(item.id.replace('answer', 'icon'));
+            otherIcon.classList.remove('rotate-180');
+          }
+        });
+      }
+    </script>
+
+<script>
+    function openAnsSection(val) {
+      var p = document.getElementById("para" + val);
+      var icon = document.getElementById("icon" + val);
+
+      if (p.classList.contains("max-h-0")) {
+        p.classList.remove("max-h-0");
+        p.classList.add("max-h-[200px]");
+      } else {
+        p.classList.remove("max-h-[200px]");
+        p.classList.add("max-h-0");
+      }
+
+      icon.classList.toggle("rotate-180");
+    }
+  </script>
+  </body>
+</html>

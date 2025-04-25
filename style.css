@@ -1,0 +1,43 @@
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  transition: left 0.3s ease-out;
+}
+
+.show {
+  left: 0;
+  transition: 300ms linear;
+}
+.hide {
+  left: -100%;
+  transition: 300ms linear;
+}
+@media (max-width: 1000px) {
+  .hero-section,
+  #about,
+  #founder {
+    flex-direction: column;
+  }
+}
+
+.menu,
+.close {
+  cursor: pointer;
+}
+
+.bg-beauty-gradient {
+  background: linear-gradient(135deg, #fff0f6 0%, #f8f0ff 50%, #fff0f8 100%);
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+}
