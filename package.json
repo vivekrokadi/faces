@@ -1,12 +1,15 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.4",
-    "tailwindcss": "^4.0.4"
+    "@tailwindcss/cli": "^4.0.4"
   },
   "name": "faces",
   "version": "1.0.0",
   "main": "gsap.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  },
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
