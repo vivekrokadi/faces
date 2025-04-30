@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facial Services | Faces Beauty Parlour</title>
+    <meta
+      name="description"
+      content="Explore a range of facial services offered by Faces Beauty Parlour. Book Hydra, Gold, Pearl & Galvanic facials tailored to your skin."
+    />
+    <meta
+      name="keywords"
+      content="Facial, Hydra Facial, Gold Facial, Pearl Facial, Galvanic Facial, Beauty Parlour, Faces Salon"
+    />
+    <meta name="author" content="Faces Beauty Parlour" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/faceslogo-bg.png"
+    />
     <link rel="stylesheet" href="../output.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -13,12 +27,11 @@
   <body class="font-['Mulish']">
     <header id="home">
       <nav class="w-[95%] mx-auto h-20 flex justify-between items-center">
-      
-          <a class="px-3.5 py-2.5 bg-pink-600 rounded-full" href="../index.html">
-            <i class="ri-arrow-left-line text-xl text-white"></i>
-          </a>
+        <a class="px-3.5 py-2.5 bg-pink-600 rounded-full" href="../index.html">
+          <i class="ri-arrow-left-line text-xl text-white"></i>
+        </a>
         <div>
-          <img class="w-20" src="../assets/images/faceslogo-bg.png" alt="">
+          <img class="w-20" src="../assets/images/faceslogo-bg.png" alt="" />
         </div>
       </nav>
     </header>
@@ -35,7 +48,11 @@
         </p>
       </div>
       <div class="flex-1 flex justify-center">
-        <img src="../assets/images/facial/hero.png" alt="facial" />
+        <img
+          src="../assets/images/facial/hero.png"
+          alt="facial"
+          loading="lazy"
+        />
       </div>
     </section>
 
@@ -52,6 +69,7 @@
               class="w-full"
               src="../assets/images/facial/HydraFacial.jpeg"
               alt="hydra facial"
+              loading="lazy"
             />
           </div>
           <div class="p-5 text-center">
@@ -75,6 +93,7 @@
               class="w-full"
               src="../assets/images/facial/gold.jpeg"
               alt="gold facial"
+              loading="lazy"
             />
           </div>
           <div class="p-5 text-center">
@@ -96,7 +115,12 @@
           class="max-w-72 hover:-translate-y-2 duration-300 shadow-md rounded-xl overflow-hidden"
         >
           <div>
-            <img class="w-full" src="../assets/images/facial/gal.jpeg" alt="galvanic facial" />
+            <img
+              class="w-full"
+              src="../assets/images/facial/gal.jpeg"
+              alt="galvanic facial"
+              loading="lazy"
+            />
           </div>
           <div class="p-5 text-center">
             <h1 class="text-lg font-semibold">Galvanic Facial</h1>
@@ -358,19 +382,21 @@
     </section>
 
     <script>
-      function openAnsSection(val) {
-        var p = document.getElementById("para" + val);
-        var icon = document.getElementById("icon" + val);
+      function openAnsSection(n) {
+        const para = document.getElementById("para" + n);
+        const icon = document.getElementById("icon" + n);
 
-        if (p.classList.contains("max-h-0")) {
-          p.classList.remove("max-h-0");
-          p.classList.add("max-h-[200px]"); // Adjust height based on content
+        if (para.classList.contains("max-h-0")) {
+          para.classList.remove("max-h-0");
+          para.classList.add("max-h-40");
+          icon.classList.remove("ri-add-line");
+          icon.classList.add("ri-subtract-line");
         } else {
-          p.classList.remove("max-h-[200px]");
-          p.classList.add("max-h-0");
+          para.classList.add("max-h-0");
+          para.classList.remove("max-h-40");
+          icon.classList.add("ri-add-line");
+          icon.classList.remove("ri-subtract-line");
         }
-
-        icon.classList.toggle("rotate-180");
       }
     </script>
   </body>

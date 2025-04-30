@@ -3,7 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basic Meta Tags -->
+    <meta
+      name="description"
+      content="Enhance your beauty with expert eye makeup and threading services at Faces Beauty Parlour. Get the perfect look for any occasion with our professional touch."
+    />
+    <meta
+      name="keywords"
+      content="Eye Makeup, Eyebrow Threading, Faces Beauty Parlour, Beauty Services, Kolhapur, Parlour Services, Eye Makeup Kolhapur, Threading Experts"
+    />
+    <meta name="author" content="Faces Beauty Parlour" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta for Facebook & LinkedIn -->
+    <meta
+      property="og:title"
+      content="Eye Makeup & Threading | Faces Beauty Parlour"
+    />
+    <meta
+      property="og:description"
+      content="Discover flawless eye makeup and professional threading services at Faces Beauty Parlour."
+    />
+    <meta
+      property="og:image"
+      content="https://facessalon.in/assets/images/eye/hero.png"
+    />
+    <meta
+      property="og:url"
+      content="https://facessalon.in/eye-makeup-threading"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Eye Makeup & Threading | Faces Beauty Parlour"
+    />
+    <meta
+      name="twitter:description"
+      content="Get perfect eye makeup and precision threading at Faces Beauty Parlour."
+    />
+    <meta
+      name="twitter:image"
+      content="https://facessalon.in/assets/images/eye/hero.png"
+    />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://facessalon.in/eye-makeup-threading" />
+
     <title>Eye Makeup & Threading | Faces Beauty Parlour</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/faceslogo-bg.png"
+    />
     <link rel="stylesheet" href="../output.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -14,12 +69,11 @@
     <!-- Header -->
     <header id="home">
       <nav class="w-[95%] mx-auto h-20 flex justify-between items-center">
-      
-          <a class="px-3.5 py-2.5 bg-pink-600 rounded-full" href="../index.html">
-            <i class="ri-arrow-left-line text-xl text-white"></i>
-          </a>
+        <a class="px-3.5 py-2.5 bg-pink-600 rounded-full" href="../index.html">
+          <i class="ri-arrow-left-line text-xl text-white"></i>
+        </a>
         <div>
-          <img class="w-20" src="../assets/images/faceslogo-bg.png" alt="">
+          <img class="w-20" src="../assets/images/faceslogo-bg.png" alt="" />
         </div>
       </nav>
     </header>
@@ -318,14 +372,25 @@
         var icon = document.getElementById("icon" + val);
 
         if (p.classList.contains("max-h-0")) {
+          // Close all other FAQs
+          for (let i = 1; i <= 4; i++) {
+            if (i !== val) {
+              document.getElementById("para" + i).classList.add("max-h-0");
+              document
+                .getElementById("icon" + i)
+                .classList.remove("ri-subtract-line");
+              document.getElementById("icon" + i).classList.add("ri-add-line");
+            }
+          }
           p.classList.remove("max-h-0");
-          p.classList.add("max-h-[200px]");
+          p.classList.add("max-h-40"); // You can increase height if needed
+          icon.classList.remove("ri-add-line");
+          icon.classList.add("ri-subtract-line");
         } else {
-          p.classList.remove("max-h-[200px]");
           p.classList.add("max-h-0");
+          icon.classList.remove("ri-subtract-line");
+          icon.classList.add("ri-add-line");
         }
-
-        icon.classList.toggle("rotate-180");
       }
     </script>
   </body>
