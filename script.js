@@ -21,3 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceCards = document.querySelectorAll('.service-card');
+  
+  serviceCards.forEach(card => {
+    // For mobile devices
+    card.addEventListener('click', function() {
+      if (window.innerWidth <= 640) {
+        this.classList.toggle('active');
+      }
+    });
+    
+    // For desktop hover
+    card.addEventListener('mouseenter', function() {
+      if (window.innerWidth > 640) {
+        this.classList.add('active');
+      }
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      if (window.innerWidth > 640) {
+        this.classList.remove('active');
+      }
+    });
+  });
+});

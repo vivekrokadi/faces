@@ -2,27 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize GSAP with ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // // Mobile menu toggle functionality
-    // const menuBtn = document.querySelector('.menu');
-    // const closeBtn = document.querySelector('.close');
-    // const sidebar = document.querySelector('.sidebar');
-
-    // menuBtn.addEventListener('click', () => {
-    //     sidebar.style.left = '0';
-    // });
-
-    // closeBtn.addEventListener('click', () => {
-    //     sidebar.style.left = '-100%';
-    // });
-
-    // // Close sidebar when clicking on menu items
-    // const menuItems = document.querySelectorAll('.menu-items a');
-    // menuItems.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         sidebar.style.left = '-100%';
-    //     });
-    // });
-
     // Hero section animation
     gsap.from('header', {
         duration: 1,
@@ -132,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1
     });
 
-    const galleryImages = document.querySelectorAll('section:nth-of-type(5) img');
+    const galleryImages = document.querySelectorAll('section:nth-of-type(5) div');
     galleryImages.forEach((img, index) => {
         gsap.from(img, {
             scrollTrigger: {
@@ -140,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: 'top 80%',
                 toggleActions: 'play none none none'
             },
-            scale: 0.8,
+            scale: 0.5,
             opacity: 0,
             duration: 0.8,
             delay: index * 0.1,
@@ -149,32 +128,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Services section animation
-    gsap.from('#services h1', {
+   // Animation for the services section heading
+gsap.from('#services h1', {
+    scrollTrigger: {
+        trigger: '#services',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.out'
+});
+
+// Animation for the services description paragraph
+gsap.from('#services p', {
+    scrollTrigger: {
+        trigger: '#services',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.2,
+    ease: 'power2.out'
+});
+
+// Animation for service cards with staggered effect
+const serviceCards = document.querySelectorAll('#services .service-card');
+serviceCards.forEach((card, index) => {
+    gsap.from(card, {
         scrollTrigger: {
-            trigger: '#services',
-            start: 'top 80%',
+            trigger: card,
+            start: 'top 85%',
             toggleActions: 'play none none none'
         },
-        y: 50,
+        y: 60,
         opacity: 0,
-        duration: 1
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: 'power2.out'
     });
+});
 
-    const serviceCards = document.querySelectorAll('#services .group');
-    serviceCards.forEach((card, index) => {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 80%',
-                toggleActions: 'play none none none'
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            delay: index * 0.1,
-            ease: 'power2.out'
-        });
-    });
+// Animation for the CTA section
+gsap.from('#services .mt-16', {
+    scrollTrigger: {
+        trigger: '#services',
+        start: 'top 60%',
+        toggleActions: 'play none none none'
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: 'power2.out'
+});
 
     // Testimonials section animation
     gsap.from('#testimonials h1', {
