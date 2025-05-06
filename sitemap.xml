@@ -1,33 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
   <url>
     <loc>https://facessalon.in/</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
+
+  <!-- Services -->
   <url>
-    <loc>https://facessalon.in/about</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://facessalon.in/#services</loc>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://facessalon.in/gallery.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Service Detail Pages -->
   <url>
-    <loc>https://facessalon.in/services</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://facessalon.in/services/facial.html</loc>
+    <lastmod>2025-05-06</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://facessalon.in/gallery</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://facessalon.in/services/makeup.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://facessalon.in/contact</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://facessalon.in/services/nails.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://facessalon.in/services/waxing.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://facessalon.in/services/spa.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://facessalon.in/services/hiars.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://facessalon.in/services/pedicure.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://facessalon.in/services/eye.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://facessalon.in/services/jewellery.html</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://facessalon.in/#contact</loc>
+    <lastmod>2025-05-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
