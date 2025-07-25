@@ -36,11 +36,6 @@ Welcome to **FACES Salon**, a modern and elegant website built to showcase the s
 
 ---
 
-## 🚀 Hosting & Deployment
-
-- Hosted on: **Netlify** (via facessalon.in)
-
----
 
 ## 🤝 Collaboration
 
